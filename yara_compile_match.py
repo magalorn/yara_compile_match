@@ -104,7 +104,7 @@ compile(filepaths=all_rules_folder, dst=namespace)
 
 # Matchear varias muestras de malware almacenadas en la misma carpeta 
 
-malware_folder = r'/home/keepcoding/Desktop/yara_automatico/malware'
+malware_folder = r'/home/Desktop/yara_automatico/malware'
 filepaths = [os.path.join(malware_folder, name) for name in os.listdir(malware_folder)]
 rules = yara.load('/home/Desktop/yara_automatico/all_rules_test/rules_compiled')
 
