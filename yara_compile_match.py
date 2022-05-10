@@ -106,10 +106,9 @@ compile(filepaths=all_rules_folder, dst=namespace)
 
 malware_folder = r'/home/Desktop/yara_automatico/malware'
 filepaths = [os.path.join(malware_folder, name) for name in os.listdir(malware_folder)]
-rules = yara.load('/home/Desktop/yara_automatico/all_rules_test/rules_compiled')
+rules = yara.load('/home/Desktop/yara_automatico/all_rules/rules_compiled')
 
 for file in filepaths:
     with open(file, 'rb') as f:
         matches = rules.match(data=f.read())
         print(file, ':', matches)
-
